@@ -7,15 +7,15 @@
 <meta name="description" content="Reshma Boutique — traditional and ethnic Indian clothing, tailoring and upcycling. Sarees, salwar suits, kurtis, lehengas and blouses.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Bodoni+Moda:ital,wght@0,500;0,600;0,700&family=Jost:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Bodoni+Moda:ital,wght@0,500;0,600;0,700&family=Outfit:wght@300;400;500;600;700&display=swap">
 <style>
 :root{
---emerald:#1F4A44; --emerald-deep:#0F2B27; --emerald-ink:#12302C; --amethyst:#5B4265; --sapphire:#2E4468;
---garnet:#6B2E43; --peacock:#1E5A66; --gold:#C9A45E; --gold-lt:#E6C98F; --gold-dk:#7C5F27;
+--emerald:#1F4A44; --emerald-deep:#0F2B27; --emerald-ink:#12302C; --amethyst:#8C4A3D; --sapphire:#2F5C64;
+--garnet:#7C5F27; --peacock:#2F5C64; --gold:#C9A45E; --gold-lt:#E6C98F; --gold-dk:#7C5F27;
 --rose:#C99A9C; --ivory:#FFFFFF; --paper:#FFFFFF; --paper-2:#F2F5F4;
 --ink:#15201D; --ink-soft:#3D4B47;
---display:'Cormorant Garamond',Georgia,serif; --fashion:'Bodoni Moda','Didot',Georgia,serif;
---body:'Jost',system-ui,-apple-system,'Segoe UI',sans-serif;
+--display:'Fraunces','Cormorant Garamond',Georgia,serif; --fashion:'Bodoni Moda','Didot',Georgia,serif;
+--body:'Outfit','Jost',system-ui,-apple-system,'Segoe UI',sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -28,6 +28,18 @@ h1,h2{margin:0;text-wrap:balance}
 p{margin:0}
 .wrap{max-width:1200px;margin:0 auto;padding:0 28px}
 .weave-dark{background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.05) 0 1px,transparent 1px 5px),repeating-linear-gradient(-45deg,rgba(0,0,0,.14) 0 1px,transparent 1px 5px)}
+.tex-dark{position:relative}
+.tex-dark::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.05) 0 1px,transparent 1px 6px),repeating-linear-gradient(-45deg,rgba(0,0,0,.16) 0 1px,transparent 1px 6px)}
+
+/* ---------- tailoring motifs: stitched thread dividers ---------- */
+.band{position:relative;overflow:hidden}
+.stitch-divider{position:absolute;left:0;top:50%;width:100%;height:30px;transform:translateY(-50%);opacity:.6;pointer-events:none}
+.stitch-divider path{fill:none;stroke:var(--gold);stroke-width:1.6;stroke-dasharray:9 7;animation:threadFlow 7s linear infinite}
+@keyframes threadFlow{to{stroke-dashoffset:-64}}
+.needle{position:absolute;top:13%;width:34px;height:34px;transform:translate(-50%,-50%);animation:needleGlide 10s ease-in-out infinite;pointer-events:none;opacity:.5}
+.needle svg{width:100%;height:100%;fill:none;stroke:var(--gold-lt);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+@keyframes needleGlide{0%,100%{left:6%}50%{left:92%}}
+@media (prefers-reduced-motion: reduce){.needle{display:none}}
 
 /* ---------- logo ---------- */
 .logo{display:block;overflow:visible}
@@ -103,7 +115,7 @@ animation:bloom 2.6s cubic-bezier(.2,.7,.2,1) 3.9s both}
 @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
 .arch-in{background:#fff;border-radius:184px 184px 6px 6px;display:flex;align-items:center;justify-content:center;padding:46px 12px 30px}
 .blobA,.blobB{position:absolute;border-radius:50%;filter:blur(10px)}
-.blobA{top:60px;left:-120px;width:420px;height:420px;background:radial-gradient(circle,rgba(91,66,101,.7),transparent 68%)}
+.blobA{top:60px;left:-120px;width:420px;height:420px;background:radial-gradient(circle,rgba(201,154,156,.55),transparent 68%)}
 .blobB{bottom:-80px;right:-60px;width:380px;height:380px;background:radial-gradient(circle,rgba(201,164,94,.35),transparent 68%)}
 
 /* ---------- marquee ---------- */
@@ -254,7 +266,7 @@ animation:bob 7s ease-in-out var(--dl) infinite;transition:filter .5s ease}
 /* ---------- contact + footer ---------- */
 .contact{padding:30px 0 90px;background:var(--paper)}
 .contact-card{position:relative;overflow:hidden;max-width:1100px;margin:0 auto;border-radius:20px;padding:60px 44px;display:flex;flex-wrap:wrap;gap:30px;align-items:center;justify-content:space-between;color:#fff;
-background:radial-gradient(70% 100% at 100% 0%,rgba(201,164,94,.32),transparent 60%),linear-gradient(135deg,#1F4A44,#2E4468);box-shadow:0 60px 80px -46px rgba(20,40,36,.8)}
+background:radial-gradient(70% 100% at 100% 0%,rgba(201,164,94,.32),transparent 60%),linear-gradient(135deg,#1F4A44,#2F5C64);box-shadow:0 60px 80px -46px rgba(20,40,36,.8)}
 .contact-copy{flex:1 1 360px;display:flex;flex-direction:column;gap:12px}
 .contact h2{font-family:var(--display);font-weight:600;font-size:clamp(38px,5.4vw,56px);line-height:1.04}
 .contact p{font-size:17px;line-height:1.7;color:#DDE8E4}
@@ -342,7 +354,7 @@ footer{background:var(--emerald-ink);color:#CFDAD5;padding:44px 28px}
 }
 
 
-.back{position:fixed;left:16px;bottom:16px;z-index:60;background:#15201D;color:#fff;font-family:Jost,sans-serif;font-size:13px;font-weight:500;letter-spacing:.06em;padding:11px 18px;border-radius:999px;box-shadow:0 14px 26px -12px rgba(0,0,0,.6)}.back:hover{background:#1F4A44}
+.back{position:fixed;left:16px;bottom:16px;z-index:60;background:#15201D;color:#fff;font-family:'Outfit',Jost,sans-serif;font-size:13px;font-weight:500;letter-spacing:.06em;padding:11px 18px;border-radius:999px;box-shadow:0 14px 26px -12px rgba(0,0,0,.6)}.back:hover{background:#1F4A44}
 .back{left:auto;right:16px;bottom:88px}
 </style>
 </head>
@@ -367,6 +379,7 @@ footer{background:var(--emerald-ink);color:#CFDAD5;padding:44px 28px}
 <div class="veil"><svg class="logo logo-splash" viewBox="330 70 940 770" role="img" aria-label="Reshma Boutique logo" style=""><use href="#rzMark" class="lg lg-mark"></use><use href="#rzHeart" class="lg lg-heart"></use><use href="#rzL0" class="lg lg-l" style="--i:0"></use><use href="#rzL1" class="lg lg-l" style="--i:1"></use><use href="#rzL2" class="lg lg-l" style="--i:2"></use><use href="#rzL3" class="lg lg-l" style="--i:3"></use><use href="#rzL4" class="lg lg-l" style="--i:4"></use><use href="#rzL5" class="lg lg-l" style="--i:5"></use><use href="#rzB0" class="lg lg-b" style="--i:0"></use><use href="#rzB1" class="lg lg-b" style="--i:1"></use><use href="#rzB2" class="lg lg-b" style="--i:2"></use><use href="#rzB3" class="lg lg-b" style="--i:3"></use><use href="#rzB4" class="lg lg-b" style="--i:4"></use><use href="#rzB5" class="lg lg-b" style="--i:5"></use><use href="#rzB6" class="lg lg-b" style="--i:6"></use><use href="#rzB7" class="lg lg-b" style="--i:7"></use><use href="#rzU0" class="lg lg-u"></use><use href="#rzU1" class="lg lg-u"></use></svg></div>
 <div class="blobA"></div>
 <div class="blobB"></div>
+<div class="needle" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M8 32L30 10"/><ellipse cx="28.5" cy="11.5" rx="1.3" ry="3.2" transform="rotate(35 28.5 11.5)"/><path d="M26 14C18 10 19 20 12 18" stroke-dasharray="2.6 2.6"/></svg></div>
 <div class="wrap">
 <div class="hero-in">
 <div class="hero-copy">
@@ -395,7 +408,7 @@ footer{background:var(--emerald-ink);color:#CFDAD5;padding:44px 28px}
 </div>
 </div>
 
-<div class="band fade-to-white"></div>
+<div class="band fade-to-white"><svg class="stitch-divider" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 Q150 2 300 20 T600 20 T900 20 T1200 20"></path></svg></div>
 <section class="services" id="services">
 <div class="wrap">
 <div class="sec-head rv">
@@ -410,13 +423,13 @@ footer{background:var(--emerald-ink);color:#CFDAD5;padding:44px 28px}
 <span class="svc-cta"><span class="plus"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M9 3v12M3 9h12"/></svg></span><span class="cta-word">Open</span></span>
 </button>
 </div><div class="svc-wrap">
-<button class="svc" data-target="tailoring" aria-expanded="false" aria-controls="panel-tailoring" style="--c:#2E4468;--deep:#16223A;--glow:rgba(110,150,210,.55)">
+<button class="svc" data-target="tailoring" aria-expanded="false" aria-controls="panel-tailoring" style="--c:#2F5C64;--deep:#163238;--glow:rgba(100,180,190,.55)">
 <span class="svc-top"><span class="svc-ico"><svg viewBox="0 0 64 64" class="ico" aria-hidden="true"><path d="M51 7L15 57"/><ellipse cx="48.6" cy="11" rx="1.5" ry="3.8" transform="rotate(35 48.6 11)"/><path class="ic-stitch" d="M47 13C30 6 32 27 20 25c-9-1.6-4 14-12 12" stroke-dasharray="3.2 3.2"/></svg></span><span class="svc-n">02</span></span>
 <span class="svc-mid"><span class="svc-name">Tailoring</span><span class="svc-tag">Customised to you</span></span>
 <span class="svc-cta"><span class="plus"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M9 3v12M3 9h12"/></svg></span><span class="cta-word">Open</span></span>
 </button>
 </div><div class="svc-wrap">
-<button class="svc" data-target="upcycling" aria-expanded="false" aria-controls="panel-upcycling" style="--c:#5B4265;--deep:#2E1F38;--glow:rgba(176,138,196,.55)">
+<button class="svc" data-target="upcycling" aria-expanded="false" aria-controls="panel-upcycling" style="--c:#8C4A3D;--deep:#4A2420;--glow:rgba(205,140,110,.55)">
 <span class="svc-top"><span class="svc-ico"><svg viewBox="0 0 64 64" class="ico" aria-hidden="true"><g class="ic-up"><path d="M47 22a18 18 0 0 0-31 1"/><path d="M15 11v12h12"/><path d="M17 42a18 18 0 0 0 31-1"/><path d="M49 53V41H37"/><path d="M32 27l5 5-5 5-5-5z"/></g></svg></span><span class="svc-n">03</span></span>
 <span class="svc-mid"><span class="svc-name">Upcycling</span><span class="svc-tag">Changing it up</span></span>
 <span class="svc-cta"><span class="plus"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M9 3v12M3 9h12"/></svg></span><span class="cta-word">Open</span></span>
@@ -445,7 +458,7 @@ footer{background:var(--emerald-ink);color:#CFDAD5;padding:44px 28px}
 <figcaption>Blouses</figcaption>
 </figure></div>
 </div></div>
-</div><div class="panel" id="panel-tailoring" style="--c:#2E4468;--deep:#16223A;--glow:rgba(110,150,210,.55)">
+</div><div class="panel" id="panel-tailoring" style="--c:#2F5C64;--deep:#163238;--glow:rgba(100,180,190,.55)">
 <div class="panel-clip"><div class="panel-in">
 <div class="panel-head">
 <div class="panel-copy"><div class="panel-title">Tailoring</div><p>Bring a fabric, a photo or an idea. We stitch it around your measurements, so the fit and the finish are yours alone.</p></div>
@@ -465,7 +478,7 @@ footer{background:var(--emerald-ink);color:#CFDAD5;padding:44px 28px}
 <figcaption>Fitted for you</figcaption>
 </figure></div>
 </div></div>
-</div><div class="panel" id="panel-upcycling" style="--c:#5B4265;--deep:#2E1F38;--glow:rgba(176,138,196,.55)">
+</div><div class="panel" id="panel-upcycling" style="--c:#8C4A3D;--deep:#4A2420;--glow:rgba(205,140,110,.55)">
 <div class="panel-clip"><div class="panel-in">
 <div class="panel-head">
 <div class="panel-copy"><div class="panel-title">Upcycling</div><p>A saree you no longer wear or an outfit with memories can become something new. We redesign it into a piece you will reach for again.</p></div>
@@ -511,7 +524,7 @@ footer{background:var(--emerald-ink);color:#CFDAD5;padding:44px 28px}
 </div>
 </section>
 
-<div class="band fade-to-green"></div>
+<div class="band fade-to-green"><svg class="stitch-divider" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 Q150 38 300 20 T600 20 T900 20 T1200 20"></path></svg></div>
 <section class="about" id="about">
 <div class="about-in">
 <div class="about-head rv">
@@ -521,13 +534,13 @@ footer{background:var(--emerald-ink);color:#CFDAD5;padding:44px 28px}
 </div>
 <div class="arches rv-z">
 <svg class="stitch-line" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true"><path class="stitch" d="M0 14 C18 2 30 18 50 10 S80 0 100 12" fill="none" stroke="rgba(230,201,143,.65)" stroke-width=".5" stroke-dasharray="2 2.4"></path></svg>
-<div class="arch" style="--dl:0s;--c:#5B4265;--gl:rgba(176,138,196,.55);margin-top:0px">
+<div class="arch" style="--dl:0s;--c:#1F4A44;--gl:rgba(86,160,146,.55);margin-top:0px">
 <svg viewBox="0 0 48 48" class="arch-ico" aria-hidden="true"><path d="M24 6c6 6 9 11 9 16a9 9 0 0 1-18 0c0-5 3-10 9-16z"/><path d="M24 22v20M24 30l-6-5M24 34l6-5"/></svg>
 <div class="arch-title">Rooted in tradition</div><div class="arch-line">Classic Indian silhouettes, from sarees to lehengas.</div><div class="arch-rule"></div>
-</div><div class="arch" style="--dl:-2.4s;--c:#1E5A66;--gl:rgba(90,180,196,.5);margin-top:40px">
+</div><div class="arch" style="--dl:-2.4s;--c:#2F5C64;--gl:rgba(100,180,190,.5);margin-top:40px">
 <svg viewBox="0 0 48 48" class="arch-ico" aria-hidden="true"><path d="M36 8L14 40"/><ellipse cx="34.6" cy="10.6" rx="1.2" ry="3" transform="rotate(35 34.6 10.6)"/><path d="M33 12C21 7 23 21 14 19 7 17.8 10 29 5 28" stroke-dasharray="2.6 2.6"/></svg>
 <div class="arch-title">Stitched to fit you</div><div class="arch-line">Tailoring made around your measurements.</div><div class="arch-rule"></div>
-</div><div class="arch" style="--dl:-4.8s;--c:#3F5A3A;--gl:rgba(130,180,120,.5);margin-top:0px">
+</div><div class="arch" style="--dl:-4.8s;--c:#8C4A3D;--gl:rgba(205,140,110,.5);margin-top:0px">
 <svg viewBox="0 0 48 48" class="arch-ico" aria-hidden="true"><path d="M35 17a13 13 0 0 0-22 1"/><path d="M12 9v9h9"/><path d="M13 31a13 13 0 0 0 22-1"/><path d="M36 39v-9h-9"/></svg>
 <div class="arch-title">Given a second life</div><div class="arch-line">Upcycling that turns pieces you love into something new.</div><div class="arch-rule"></div>
 </div>
@@ -535,7 +548,7 @@ footer{background:var(--emerald-ink);color:#CFDAD5;padding:44px 28px}
 </div>
 </section>
 
-<div class="band fade-from-green"></div>
+<div class="band fade-from-green"><svg class="stitch-divider" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 Q150 2 300 20 T600 20 T900 20 T1200 20"></path></svg></div>
 <section class="howto">
 <div class="howto-in">
 <h2 class="rv">Three steps to your outfit</h2>

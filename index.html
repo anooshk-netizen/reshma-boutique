@@ -1,19 +1,28 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Reshma Boutique — three website directions</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Bodoni+Moda:ital,wght@0,500;0,600;0,700&family=Jost:wght@300;400;500;600&display=swap">
+<title>Reshma Boutique — three website directions</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Bodoni+Moda:ital,wght@0,500;0,600;0,700&family=Outfit:wght@300;400;500;600;700&display=swap">
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Jost,system-ui,sans-serif;color:#1A2320;background:#F7F5F0;-webkit-font-smoothing:antialiased}
+body{margin:0;font-family:'Outfit',Jost,system-ui,sans-serif;color:#1A2320;background-color:#F7F5F0;background-image:repeating-linear-gradient(45deg,rgba(20,51,46,.025) 0 1px,transparent 1px 7px),repeating-linear-gradient(-45deg,rgba(20,51,46,.03) 0 1px,transparent 1px 7px);-webkit-font-smoothing:antialiased}
 a{text-decoration:none;color:inherit} h1,h2{margin:0;text-wrap:balance} p{margin:0}
 a:focus-visible{outline:3px solid #C9A45E;outline-offset:3px}
-header{background:#14332E;color:#fff;padding:64px 32px 70px;text-align:center}
+header{background:#14332E;color:#fff;padding:64px 32px 70px;text-align:center;position:relative;overflow:hidden}
+header::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.05) 0 1px,transparent 1px 6px),repeating-linear-gradient(-45deg,rgba(0,0,0,.16) 0 1px,transparent 1px 6px)}
+header>*{position:relative;z-index:1}
+footer{position:relative;overflow:hidden}
+footer::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.05) 0 1px,transparent 1px 6px),repeating-linear-gradient(-45deg,rgba(0,0,0,.16) 0 1px,transparent 1px 6px)}
 .mark{display:flex;justify-content:center;margin-bottom:22px}
 header .k{font-size:12px;letter-spacing:.42em;text-transform:uppercase;font-weight:600;color:#D9AEB0}
-header h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(38px,5.4vw,60px);line-height:1.04;margin:14px 0 18px}
+header h1{font-family:'Fraunces','Cormorant Garamond',serif;font-weight:600;font-size:clamp(38px,5.4vw,60px);line-height:1.04;margin:14px 0 18px}
 header p{font-size:17px;line-height:1.8;color:#D6E0DB;max-width:46em;margin:0 auto}
 .grid{max-width:1240px;margin:0 auto;padding:54px 24px 80px;display:flex;flex-wrap:wrap;gap:24px;align-items:stretch}
 .opt{flex:1 1 340px;min-width:300px;display:flex;flex-direction:column;gap:18px;background:#fff;border:1px solid #E4DED1;border-radius:6px;padding:28px;transition:transform .4s,box-shadow .4s}
 .opt:hover{transform:translateY(-6px);box-shadow:0 40px 60px -44px rgba(20,40,36,.8)}
+.stitch-divider-wrap{position:relative;height:1px;max-width:1240px;margin:0 auto}
+.stitch-divider{position:absolute;left:0;top:-16px;width:100%;height:32px;opacity:.55;pointer-events:none}
+.stitch-divider path{fill:none;stroke:#C9A45E;stroke-width:1.6;stroke-dasharray:9 7;animation:threadFlow 7s linear infinite}
+@keyframes threadFlow{to{stroke-dashoffset:-64}}
+@media (prefers-reduced-motion: reduce){.stitch-divider path{animation:none}}
 .opt-label{font-size:12px;letter-spacing:.34em;text-transform:uppercase;font-weight:600}
 .opt h2{font-family:'Bodoni Moda',Didot,serif;font-weight:600;font-size:38px;line-height:1;margin:8px 0 10px}
 .opt-blurb{font-size:16px;line-height:1.65;color:#4C5753}
@@ -30,7 +39,7 @@ header p{font-size:17px;line-height:1.8;color:#D6E0DB;max-width:46em;margin:0 au
 .view:hover{transform:translateY(-2px);filter:brightness(1.12)}
 .note{max-width:1240px;margin:0 auto;padding:0 24px 80px}
 .note-in{background:#fff;border:1px solid #E4DED1;border-radius:6px;padding:30px 32px;display:flex;flex-direction:column;gap:12px}
-.note-in h3{margin:0;font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:#14332E}
+.note-in h3{margin:0;font-family:'Fraunces','Cormorant Garamond',serif;font-size:30px;font-weight:600;color:#14332E}
 .note-in p,.note-in li{font-size:16px;line-height:1.75;color:#3D4845}
 .note-in ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:7px}
 footer{background:#14332E;color:#B9C7C1;padding:34px 24px;text-align:center;font-size:14px}
@@ -44,6 +53,7 @@ footer{background:#14332E;color:#B9C7C1;padding:34px 24px;text-align:center;font
 <h1>Three directions for your website</h1>
 <p>Each one is a working page with the same content, the same logo and the same colours. What changes is the layout: where the menu sits, where the logo sits, and how much movement there is. Open all three, then tell us which one feels like Reshma Boutique.</p>
 </header>
+<div class="stitch-divider-wrap"><svg class="stitch-divider" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 Q150 2 300 20 T600 20 T900 20 T1200 20"/></svg></div>
 <div class="grid">
 <article class="opt">
 <div class="opt-head">
